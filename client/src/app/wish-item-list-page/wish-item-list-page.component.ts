@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WishService } from '../wish.service';
 
 @Component({
   selector: 'app-wish-item-list-page',
@@ -7,12 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WishItemListPageComponent implements OnInit {
 
-  readonly wishItems = [
-    { name: "ps5", price: "50"},
-    { name: "tv", price: "50"},
-  ]
+  readonly wishItems$ = this.wishService.getWishes();
 
-  constructor() { }
+  constructor(readonly wishService: WishService) { }
 
   ngOnInit(): void {
   }

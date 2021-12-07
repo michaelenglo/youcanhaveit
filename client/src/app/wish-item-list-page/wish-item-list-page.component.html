@@ -1,4 +1,4 @@
-<li *ngFor="let wishItem of wishItems">
+<li *ngFor="let wishItem of (wishItems$ | async)">
     <span>
         {{wishItem.name}}
     </span>
