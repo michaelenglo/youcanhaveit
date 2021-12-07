@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WishItemListPageComponent implements OnInit {
 
+  readonly wishItems = [
+    { name: "ps5", price: "50"},
+    { name: "tv", price: "50"},
+  ]
+
   constructor() { }
 
   ngOnInit(): void {
